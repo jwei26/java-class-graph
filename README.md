@@ -1,59 +1,54 @@
-<pre>
 # Java Class Graph
 
-This project is a Java application designed to analyze class dependencies in Java projects. It parses Java source code files, creates a graph of dependencies between classes, and provides insights into the relationships and structure of your Java project.
+This project aims to build a directed graph of Java classes, where nodes represent classes and edges represent class relationships like inheritance, composition, and aggregation.
 
-## Features
+## Table of Contents
 
-- Parse Java source code files to identify class dependencies
-- Create a graph representation of the project's class structure
-- Generate a visual representation of the class dependency graph
-- Provide insights and metrics for class coupling and cohesion
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Getting Started
 
-To get started with this project, follow these steps:
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+- Java Development Kit (JDK) 8 or later
+- Maven
+- IntelliJ IDEA (or any other Java IDE)
+
+### Installation
 
 1. Clone the repository:
 
-```
 git clone https://github.com/jwei26/java-class-graph.git
-```
 
-2. Open the project in your favorite Java IDE (e.g., IntelliJ IDEA, Eclipse).
+2. Import the project into your Java IDE (e.g., IntelliJ IDEA).
 
-3. Ensure you have the necessary JDK installed. This project requires JDK 8 or higher.
-
-4. Build the project using your IDE's build tools or by running the following command in the project root directory:
-
-```
-./mvnw clean install
-```
-
-5. Run the application using your IDE or by running the following command in the project root directory:
-
-```
-./mvnw spring-boot:run
-```
+3. Build the project using Maven:
 
 ## Usage
 
-To analyze a Java project, provide the path to the directory containing the source code files as a command line argument:
+Once the project is set up, you can run the main class (e.g., `JavaClassGraph.java`) to generate the directed graph of Java classes.
 
-```
-java -jar target/java-class-graph-1.0-SNAPSHOT.jar /path/to/your/java/project
-```
-
-This will generate a report detailing the class dependencies and other relevant metrics for the provided project.
+Please refer to the source code and comments for further details on how the graph is constructed and analyzed.
 
 ## Contributing
 
-We welcome contributions to this project! To contribute, please:
+Contributions are welcome! To contribute:
 
 1. Fork the repository.
-2. Create a new branch with a descriptive name.
-3. Make your changes and commit them to your branch.
-4. Open a pull request against the `main` branch of the original repository.
+2. Create a new branch for your feature or bugfix.
+3. Commit your changes.
+4. Push the branch to your fork.
+5. Create a pull request.
 
-Please ensure your code is well-documented and adheres to the project's coding style.
-</pre>
+Before submitting a pull request, please ensure that your code follows the project's coding style and conventions.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). See the LICENSE file for more information.
