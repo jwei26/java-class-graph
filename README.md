@@ -3,7 +3,7 @@
 This project aims to build a directed graph of Java classes, where nodes represent classes and edges represent class relationships like inheritance, composition, and aggregation.
 
 ## Table of Contents
-
+- [Features](#Features)
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
@@ -11,25 +11,44 @@ This project aims to build a directed graph of Java classes, where nodes represe
 - [Contributing](#contributing)
 - [License](#license)
 
+## Features
+
+1.  Parse Java source code files to identify class dependencies
+2.  Create a graph representation of the project's class structure
+3.  Generate a visual representation of the class dependency graph
+4.  Provide insights and metrics for class coupling and cohesion
+
 ## Getting Started
 
-To get a local copy up and running, follow these steps.
+To get started with this project, follow these steps:
+
+1. Clone the repository:
+
+```
+git clone https://github.com/jwei26/java-class-graph.git
+```
+
+2. Open the project in your favorite Java IDE (e.g., IntelliJ IDEA, Eclipse).
+
+3. Ensure you have the necessary JDK installed. This project requires JDK 8 or higher.
+
+4. Build the project using your IDE's build tools or by running the following command in the project root directory:
+
+```
+./mvnw clean install
+```
+
+5. Run the application using your IDE or by running the following command in the project root directory:
+
+```
+./mvnw spring-boot:run
+```
 
 ### Prerequisites
 
 - Java Development Kit (JDK) 8 or later
 - Maven
 - IntelliJ IDEA (or any other Java IDE)
-
-### Installation
-
-1. Clone the repository:
-
-git clone https://github.com/jwei26/java-class-graph.git
-
-2. Import the project into your Java IDE (e.g., IntelliJ IDEA).
-
-3. Build the project using Maven:
 
 ## Usage
 
@@ -48,7 +67,3 @@ Contributions are welcome! To contribute:
 5. Create a pull request.
 
 Before submitting a pull request, please ensure that your code follows the project's coding style and conventions.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE). See the LICENSE file for more information.
