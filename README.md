@@ -49,7 +49,7 @@ mvn clean install
 3. Use the Swagger UI to interact with the provided API endpoints. Enter a Git repository URL and, if needed, a class name as input.
 
 ## Usage
-After successful execution, the application will generate a DOT file (output.dot for the /analyze endpoint, and output.dot for the /analyze-by-class-name endpoint), which can be used to visualize the relationships between classes. You can use a tool like Graphviz or an online DOT viewer to render the graph.
+After successful execution, the application will generate a DOT file (output.dot for the /analyze endpoint, and output.dot for the /analyze-by-class-name endpoint), which can be used to visualize the relationships between classes. You can use a tool like Graphviz or an online DOT viewer to render the graph.https://viz-js.com/
 
 ## Docker Deployment
 1. Build the Docker image:
