@@ -1,4 +1,5 @@
-FROM openjdk:17-slim
+# 使用官方的OpenJDK 17基础镜像
+FROM openjdk:17-jdk-slim-buster as builder
 
 WORKDIR /app
 
@@ -10,7 +11,7 @@ COPY pom.xml /app
 
 RUN ./mvnw clean package -DskipTests
 
-FROM openjdk:17-slim
-COPY --from=0 /app/target/*.jar /app/app.jar
+FROM openjdk:17-jdk-slim-buster
+COPY --from=builder /app/target/*.jar /app/app.jar
 
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
