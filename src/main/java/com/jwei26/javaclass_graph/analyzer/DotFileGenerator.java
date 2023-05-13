@@ -33,7 +33,7 @@ class DotFileGenerator {
                 .append("\" [label=\"").append(label).append("\"];\n");
     }
 
-    public void generate() {
+    public String generate() {
         subgraphs.values().forEach(subgraph -> {
             subgraph.append("}\n");
             stringBuilder.append(subgraph.toString());
@@ -46,6 +46,7 @@ class DotFileGenerator {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return stringBuilder.toString();
     }
 }
 

@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class JavaClassAnalyzer {
-    public static void analyze(Git git) throws IOException {
+    public static String analyze(Git git) throws IOException {
         DotFileGenerator dotFileGenerator = new DotFileGenerator("output.dot");
 
         Repository repository = git.getRepository();
@@ -41,7 +41,7 @@ public class JavaClassAnalyzer {
             }
         }
 
-        dotFileGenerator.generate();
+        return dotFileGenerator.generate();
     }
 
     private static void analyzeJavaFile(String path, InputStream inputStream, DotFileGenerator dotFileGenerator) throws IOException {
@@ -68,7 +68,7 @@ public class JavaClassAnalyzer {
         }, null);
     }
 
-    public static void analyzeByClassName(Git git, String targetClassName) throws IOException {
+    public static String analyzeByClassName(Git git, String targetClassName) throws IOException {
         DotFileGenerator dotFileGenerator = new DotFileGenerator("output.dot");
 
         Repository repository = git.getRepository();
@@ -91,7 +91,7 @@ public class JavaClassAnalyzer {
             }
         }
 
-        dotFileGenerator.generate();
+        return dotFileGenerator.generate();
     }
 
     private static void analyzeRelatedJavaClasses(String path, InputStream inputStream, DotFileGenerator dotFileGenerator, String targetClassName) throws IOException {

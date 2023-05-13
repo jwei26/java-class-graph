@@ -17,8 +17,8 @@ public class JavaClassAnalyzerController {
     public String analyze(@RequestParam("repositoryUrl") String repositoryUrl) {
         try {
             Git git = cloneRepository(repositoryUrl);
-            JavaClassAnalyzer.analyze(git);
-            return "Analysis completed. Please check the output.dot file.";
+            String outputDotStr = JavaClassAnalyzer.analyze(git);
+            return "Analysis completed. Please check the output.dot file.\n" + outputDotStr;
         } catch (IOException | GitAPIException e) {
             return "Error: " + e.getMessage();
         }
@@ -29,8 +29,8 @@ public class JavaClassAnalyzerController {
             @RequestParam("className") String className) {
         try {
             Git git = cloneRepository(repositoryUrl);
-            JavaClassAnalyzer.analyzeByClassName(git, className);
-            return "Analysis completed. Please check the output.dot file.";
+            String outputDotStr = JavaClassAnalyzer.analyzeByClassName(git, className);
+            return "Analysis completed. Please check the output.dot file.\n" + outputDotStr;
         } catch (IOException | GitAPIException e) {
             return "Error: " + e.getMessage();
         }
